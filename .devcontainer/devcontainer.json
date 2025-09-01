@@ -4,10 +4,8 @@
   "service": "jekyll",
   "workspaceFolder": "/usr/src/app",
   
-  // Keep container running for development
   "shutdownAction": "none",
   
-  // Configure VS Code settings and extensions
   "customizations": {
     "vscode": {
       "settings": {
@@ -43,35 +41,25 @@
         }
       },
       "extensions": [
-        // Jekyll and Liquid
         "shopify.theme-check-vscode",
         "sissel.shopify-liquid",
-        
-        // Ruby
         "rebornix.ruby",
         "wingrunr21.vscode-ruby", 
         "kaiwood.endwise",
-        
-        // Markdown and documentation
         "yzhang.markdown-all-in-one",
         "davidanson.vscode-markdownlint",
         "chrischinchilla.vale-vscode",
         "bierner.markdown-mermaid",
-        
-        // General development
         "ms-vscode.vscode-json",
         "formulahendry.auto-rename-tag",
         "streetsidesoftware.code-spell-checker",
         "editorconfig.editorconfig",
-        
-        // Git and GitHub
         "mhutchie.git-graph",
         "github.vscode-pull-request-github"
       ]
     }
   },
 
-  // Forward Jekyll and LiveReload ports
   "forwardPorts": [4000, 35729],
   "portsAttributes": {
     "4000": {
@@ -85,13 +73,10 @@
     }
   },
 
-  // Post-create command to set up the development environment
   "postCreateCommand": "bash .devcontainer/setup.sh",
 
-  // Use root user for simplicity in development container
   "remoteUser": "root",
   
-  // Additional features for development
   "features": {
     "ghcr.io/devcontainers/features/git:1": {
       "version": "latest"
