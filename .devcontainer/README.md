@@ -17,6 +17,8 @@ This directory contains the VS Code Dev Container configuration for the Spryker 
    - Install [VS Code](https://code.visualstudio.com/)
    - Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
    - Install the [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+   - **Memory Requirements**: At least 4GB of available RAM recommended (8GB+ for optimal performance)
+     - For GitHub Codespaces: Use "4-core" machine type or higher
 
 2. **Opening the project:**
    - Open this repository in VS Code
@@ -97,6 +99,16 @@ The devcontainer automatically installs extensions for:
 1. Ensure Docker Desktop is running
 2. Try rebuilding: Command Palette > "Dev Containers: Rebuild Container"
 3. Check Docker has enough memory allocated (recommend 4GB+)
+
+### Memory/Performance issues
+1. **High memory usage during build**: 
+   - Close unnecessary VS Code extensions/windows
+   - For GitHub Codespaces: Upgrade to 4-core machine type or higher
+   - Consider building incrementally: use `bundle exec jekyll serve --incremental`
+2. **Slow performance**:
+   - Ensure Docker Desktop has sufficient memory (8GB+ recommended)
+   - Disable unused VS Code extensions
+   - Use `jekyll serve --incremental --profile` to identify bottlenecks
 
 ### Bundle/Gem issues
 1. Open terminal in VS Code

@@ -24,11 +24,6 @@
           "MD013": { "line_length": 120 },
           "MD033": false
         },
-        "ruby.rubocop.executePath": "",
-        "ruby.format": "rubocop",
-        "ruby.lint": {
-          "rubocop": true
-        },
         "liquid.format.enable": true,
         "files.exclude": {
           "**/.git": true,
@@ -43,18 +38,13 @@
       "extensions": [
         "shopify.theme-check-vscode",
         "sissel.shopify-liquid",
-        "rebornix.ruby",
-        "wingrunr21.vscode-ruby", 
-        "kaiwood.endwise",
         "yzhang.markdown-all-in-one",
         "davidanson.vscode-markdownlint",
         "chrischinchilla.vale-vscode",
         "bierner.markdown-mermaid",
         "ms-vscode.vscode-json",
-        "formulahendry.auto-rename-tag",
         "streetsidesoftware.code-spell-checker",
         "editorconfig.editorconfig",
-        "mhutchie.git-graph",
         "github.vscode-pull-request-github"
       ]
     }
@@ -76,6 +66,12 @@
   "postCreateCommand": "bash .devcontainer/setup.sh",
 
   "remoteUser": "root",
+  
+  "containerEnv": {
+    "BUNDLE_JOBS": "1",
+    "BUNDLE_RETRY": "3",
+    "JEKYLL_ENV": "development"
+  },
   
   "features": {
     "ghcr.io/devcontainers/features/git:1": {

@@ -4,13 +4,13 @@
 
 echo "🚀 Setting up Spryker Docs development environment..."
 
-# Install Ruby dependencies
+# Install Ruby dependencies with reduced memory usage
 echo "📦 Installing Ruby gems..."
-bundle install --retry=3
+bundle install --retry=3 --jobs=1
 
-# Install Node.js dependencies  
+# Install Node.js dependencies with reduced memory usage
 echo "📦 Installing Node.js packages..."
-npm install
+npm install --prefer-offline --no-audit --no-fund
 
 # Install additional tools
 echo "🔧 Installing additional development tools..."
