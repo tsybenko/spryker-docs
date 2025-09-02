@@ -1,0 +1,84 @@
+{
+  "name": "Spryker Docs",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "jekyll",
+  "workspaceFolder": "/usr/src/app",
+  
+  "shutdownAction": "none",
+  
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.associations": {
+          "*.html": "liquid",
+          "*.md": "markdown"
+        },
+        "editor.renderWhitespace": "all",
+        "editor.tabSize": 2,
+        "editor.insertSpaces": true,
+        "markdown.preview.theme": "dark",
+        "vale.valeCLI.path": "vale",
+        "vale.valeCLI.config": "${workspaceFolder}/.vale.ini",
+        "markdownlint.config": {
+          "default": true,
+          "MD013": { "line_length": 120 },
+          "MD033": false
+        },
+        "liquid.format.enable": true,
+        "files.exclude": {
+          "**/.git": true,
+          "**/.DS_Store": true,
+          "**/node_modules": true,
+          "**/_site": true,
+          "**/vendor": true,
+          "**/.sass-cache": true,
+          "**/.jekyll-cache": true
+        }
+      },
+      "extensions": [
+        "shopify.theme-check-vscode",
+        "sissel.shopify-liquid",
+        "yzhang.markdown-all-in-one",
+        "davidanson.vscode-markdownlint",
+        "chrischinchilla.vale-vscode",
+        "bierner.markdown-mermaid",
+        "ms-vscode.vscode-json",
+        "streetsidesoftware.code-spell-checker",
+        "editorconfig.editorconfig",
+        "github.vscode-pull-request-github"
+      ]
+    }
+  },
+
+  "forwardPorts": [4000, 35729],
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll Server",
+      "onAutoForward": "openBrowser",
+      "protocol": "http"
+    },
+    "35729": {
+      "label": "LiveReload",
+      "protocol": "http"
+    }
+  },
+
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+
+  "remoteUser": "root",
+  
+  "containerEnv": {
+    "BUNDLE_JOBS": "1",
+    "BUNDLE_RETRY": "3",
+    "JEKYLL_ENV": "development"
+  },
+  
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    }
+  }
+}
