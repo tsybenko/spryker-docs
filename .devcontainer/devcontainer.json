@@ -4,7 +4,7 @@
         "dockerfile": "./Dockerfile",
         "context": ".",
         "args": {
-            "VARIANT": "3.2.2-slim"
+            "VARIANT": "3.2"
         }
     },
     "features": {
