@@ -5,18 +5,20 @@
         "context": "."
     },
     "features": {
+        "ghcr.io/devcontainers/features/git-lfs:1": "none",
         "ghcr.io/devcontainers/features/node:1": {
             "version": "lts"
         }
     },
     "portsAttributes": {
         "4000": {
-            "label": "Jekyll server",
+            "label": "Jekyll: Server",
             "onAutoForward": "openBrowser"
         },
         "35729": {
-            "label": "LiveReload",
+            "label": "Jekyll: Live reload",
             "onAutoForward": "silent"
         }
-    }
+    },
+    "remoteUser": "spryker"
 }

@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 # Install Bundler and project gems (including Jekyll)
 RUN gem install bundler jekyll
 
-RUN chown -R "vscode:rvm" "/usr/local/rvm/" \
+RUN chown -R "spryker:rvm" "/usr/local/rvm/" \
     && chmod -R g+r+w "/usr/local/rvm/" \
     && find "/usr/local/rvm/" -type d | xargs -n 1 chmod g+s
 
