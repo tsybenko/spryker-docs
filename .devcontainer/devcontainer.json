@@ -1,0 +1,25 @@
+{
+    "name": "Spryker Docs",
+    "build": {
+        "dockerfile": "./Dockerfile",
+        "context": ".",
+        "args": {
+            "VARIANT": "3.2.2-slim"
+        }
+    },
+    "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+        "version": "lts"
+    }
+    },
+    "portsAttributes": {
+        "4000": {
+            "label": "Jekyll server",
+            "onAutoForward": "openBrowser"
+        },
+        "35729": {
+            "label": "LiveReload",
+            "onAutoForward": "silent"
+        }
+    }
+}
