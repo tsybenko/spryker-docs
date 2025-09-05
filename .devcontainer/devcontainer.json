@@ -2,15 +2,12 @@
     "name": "Spryker Docs",
     "build": {
         "dockerfile": "./Dockerfile",
-        "context": ".",
-        "args": {
-            "VARIANT": "3.2"
-        }
+        "context": "."
     },
     "features": {
-    "ghcr.io/devcontainers/features/node:1": {
-        "version": "lts"
-    }
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts"
+        }
     },
     "portsAttributes": {
         "4000": {
