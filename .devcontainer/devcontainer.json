@@ -33,8 +33,27 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "sissel.shopify-liquid"
-            ]
+                "sissel.shopify-liquid",
+                "DavidAnson.vscode-markdownlint"
+            ],
+            "settings": {
+                "markdownlint.configFile": ".markdownlint.json",
+                "markdownlint.customRules": [
+                    "./mdlint/bare-links.js",
+                    "./mdlint/no-space-in-emphasis.js"
+                ],
+                "markdownlint.lintWorkspaceGlobs": [
+                    "docs/**/*.md",
+                    "_includes/pbc/**/*.md",
+                    "!**/202311.0/**",
+                    "!**/202404.0/**",
+                    "!**/*.code-search",
+                    "!**/bower_components",
+                    "!**/node_modules",
+                    "!**/.git",
+                    "!**/vendor"
+                ]
+            }
         }
     }
 }
