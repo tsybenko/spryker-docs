@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Spryker Docs: Serve",
+            "detail": "Serves the Spryker documentation locally using Jekyll for preview and development.",
+            "type": "shell",
+            "command": "bundle exec jekyll serve --host 0.0.0.0 --incremental"
+        },
+        {
+            "label": "Spryker Docs: Markdown Lint",
+            "detail": "Runs markdownlint to check Markdown files for style and formatting issues.",
+            "type": "shell",
+            "command": "markdownlint-cli2 \"docs/**/*.md\" \"_includes/pbc/**/*.md\" \"#node_modules\""
+        }
+    ]
+}
