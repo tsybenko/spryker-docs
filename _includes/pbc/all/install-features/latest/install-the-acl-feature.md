@@ -15,6 +15,8 @@ Install the required features:
 composer require spryker-feature/acl:"202507.0" --update-with-dependencies
 ```
 
+Hello
+
 {% info_block warningBox "Verification" %}
 
 Make sure the following modules have been installed:
